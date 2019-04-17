@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<div id="logo" onclick="slowScroll('#top')">
+			<span>qenz</span>
+		</div>
+		<div id="about">
+			<a href="https://www.minecraft.net/ru-ru/" title="Возможности" onclick="slowScroll('#main')">Сайт Minecraft</a>
+			<a href="https://minecraft-setup.ru/?gclid=EAIaIQobChMIxrXg_uHX4QIVT6maCh3j0wJGEAAYASAAEgLH6fD_BwE" title="Преимущества" onclick="slowScroll('#overview')">СКАЧАТЬ!</a>
+			<a href="https://my.minecraft.net/ru-ru/store/minecraft/#register" title="Контакты" onclick="slowScroll('#contacts')">КУПИТЬ!</a>
+			<a href="https://vk.com/lexa_2o18" title="FAQ" onclick="slowScroll('#faq')">Я Вконтакте</a>
+		</div>
+	</header>	
+	
+	<div id="top">
+    	<h1>Minecraft</h1>
+    	<h3>как смысл жизни</h3>
+  	</div>
+	
+	<div id="main">
+    <div class="intro">
+      <h2>Майнкрафт</h2>
+      <span>Самая лучшая игра за последнюю тысячу лет.</span>
+    </div>
+    <div class="text">
+      <span>Minecraft - это строительная игра жанра «песочница». Игра позволяет игрокам создавать и разрушать различные блоки и использовать предметы в трёхмерном окружении. Игрок может создавать фантастические строения и художественные работы в одиночку или с другими игроками на сервере в различных игровых режимах.</span>
+    </div>
+  </div>
+
+  
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script>
+		function slowScroll(id) {
+			$('html, body').animate({
+				scrollTop: $(id).offset().top
+			}, 500);
+		}
+			$(document).on("scroll", function () {
+      		if($(window).scrollTop() === 0)
+        	$("header").removeClass("fixed");
+      		else
+        	$("header").attr("class", "fixed");
+    	});
+	</script>
+
+</body>
+</html>
